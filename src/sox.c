@@ -3052,8 +3052,8 @@ int main2(int argc, char **argv)
   return 0;
 }
 
-#include <malloc.h>
 #ifdef WIN32
+#include <malloc.h>
 #define alloca _alloca
 #endif
 int main(int argc, char **argv) {
