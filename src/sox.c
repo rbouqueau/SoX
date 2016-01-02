@@ -2848,7 +2848,7 @@ static sox_bool cmp_comment_text(char const * c1, char const * c2)
   return c1 && c2 && !strcasecmp(c1, c2);
 }
 
-int main(int argc, char **argv)
+int main2(int argc, char **argv)
 {
   size_t i;
   char mybase[6];
@@ -3050,4 +3050,46 @@ int main(int argc, char **argv)
   cleanup();
 
   return 0;
+}
+
+#include <malloc.h>
+#ifdef WIN32
+#define alloca _alloca
+#endif
+int main(int argc, char **argv) {
+#define ARGV2SIZE 14
+	char *argv2[ARGV2SIZE];
+	const int expectedArgNum = 6;
+	if (argc != expectedArgNum) {
+		fprintf(stderr, "%s filename.wav samplerate(22050, ..) numberofchannels(1 or 2) bitdepth(8 or 16) duration_in_integer_seconds\n", argv[0]);
+		return 127;
+	}
+	argv2[ 0] = argv[0];
+	argv2[ 1] = "-b";
+	argv2[ 2] = argv[4];
+	argv2[ 3] = "-c";
+	argv2[ 4] = argv[3];
+	argv2[ 5] = "-r";
+	argv2[ 6] = argv[2];
+	argv2[ 7] = "-t";
+#ifdef WIN32
+	argv2[ 8] = "waveaudio";
+#elif defined __APPLE__
+	argv2[ 8] = "coreaudio";
+#elif
+#error unrecognized platform for customization
+#endif
+	argv2[ 9] = "-d";
+	argv2[10] = argv[1];
+	argv2[11] = "trim";
+	argv2[12] = "0";
+	{
+		const char *str = "0:0%d";
+		const int len = strlen(str)+1;
+		char *dst = NULL;
+		dst = (char*)alloca(len);
+		snprintf(dst, len, str, atoi(argv[5]));
+		argv2[13] = dst;
+		return main2(ARGV2SIZE, argv2);
+	}
 }
