@@ -69,7 +69,7 @@
   EFFECT(silence)
   EFFECT(sinc)
 #ifdef HAVE_PNG
-  EFFECT(spectrogram)
+  //EFFECT(spectrogram)
 #endif
   EFFECT(speed)
 #ifdef HAVE_SPEEXDSP

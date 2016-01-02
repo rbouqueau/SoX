@@ -225,6 +225,7 @@ static int xxxAdpcmWriteBlock(sox_format_t * ft)
 /****************************************************************************/
 /* WAV GSM6.10 support functions                                            */
 /****************************************************************************/
+#if 0 //Romain
 /* create the gsm object, malloc buffer for 160*2 samples */
 static int wavgsminit(sox_format_t * ft)
 {
@@ -368,6 +369,7 @@ static void wavgsmstopwrite(sox_format_t * ft)
 
     wavgsmdestroy(ft);
 }
+#endif
 
 /****************************************************************************/
 /* General Sox WAV file code                                                */
@@ -940,11 +942,13 @@ static int startread(sox_format_t * ft)
         ft->signal.length = wav->numSamples*ft->signal.channels;
         break;
 
+#if 0 //Romain
     case WAVE_FORMAT_GSM610:
         wav->numSamples = ((qwDataLength / wav->blockAlign) * wav->samplesPerBlock);
         wavgsminit(ft);
         ft->signal.length = wav->numSamples*ft->signal.channels;
         break;
+#endif
 
     default:
         wav->numSamples = div_bits(qwDataLength, ft->encoding.bits_per_sample) / ft->signal.channels;
@@ -1167,6 +1171,7 @@ static size_t read_samples(sox_format_t * ft, sox_sample_t *buf, size_t len)
             return done;
             break;
 
+#if 0 //Romain
         case SOX_ENCODING_GSM:
             if (!wav->ignoreSize && len > wav->numSamples*ft->signal.channels)
                 len = (wav->numSamples*ft->signal.channels);
@@ -1175,6 +1180,7 @@ static size_t read_samples(sox_format_t * ft, sox_sample_t *buf, size_t len)
             if (done == 0 && wav->numSamples != 0 && !wav->ignoreSize)
                 lsx_warn("Premature EOF on .wav input file");
         break;
+#endif
 
         default: /* assume PCM or float encoding */
             if (!wav->ignoreSize && len > wav->numSamples*ft->signal.channels)
@@ -1216,9 +1222,11 @@ static int stopread(sox_format_t * ft)
 
     switch (ft->encoding.encoding)
     {
+#if 0 //Romain
     case SOX_ENCODING_GSM:
         wavgsmdestroy(ft);
         break;
+#endif
     case SOX_ENCODING_IMA_ADPCM:
     case SOX_ENCODING_MS_ADPCM:
         break;
@@ -1273,9 +1281,11 @@ static int startwrite(sox_format_t * ft)
             wav->sampleTop = wav->samples + sbsize;
             wav->samplePtr = wav->samples;
             break;
-
+						
+#if 0 //Romain
         case WAVE_FORMAT_GSM610:
             return wavgsminit(ft);
+#endif
 
         default:
             break;
@@ -1613,12 +1623,14 @@ static size_t write_samples(sox_format_t * ft, const sox_sample_t *buf, size_t l
             }
             return total_len - len;
             break;
-
+						
+#if 0 //Romain
         case WAVE_FORMAT_GSM610:
             len = wavgsmwrite(ft, buf, len);
             wav->numSamples += (len/ft->signal.channels);
             return len;
             break;
+#endif
 
         default:
             len = lsx_rawwrite(ft, buf, len);
@@ -1641,9 +1653,11 @@ static int stopwrite(sox_format_t * ft)
         case WAVE_FORMAT_ADPCM:
             xxxAdpcmWriteBlock(ft);
             break;
+#if 0 //Romain
         case WAVE_FORMAT_GSM610:
             wavgsmstopwrite(ft);
             break;
+#endif
         }
 
         /* Add a pad byte if the number of data bytes is odd.

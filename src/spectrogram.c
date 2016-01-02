@@ -26,9 +26,9 @@
 #ifdef HAVE_LIBPNG_PNG_H
 #include <libpng/png.h>
 #else
-#include <png.h>
+//Romain: #include <png.h>
 #endif
-#include <zlib.h>
+//Romain: #include <zlib.h>
 
 /* For SET_BINARY_MODE: */
 #include <fcntl.h>
@@ -394,6 +394,7 @@ static unsigned colour(priv_t const * p, double x)
   return fixed_palette + c;
 }
 
+#if 0 //Romain: 
 static void make_palette(priv_t const * p, png_color * palette)
 {
   int i;
@@ -696,3 +697,5 @@ sox_effect_handler_t const * lsx_spectrogram_effect_fn(void)
   handler.usage = lsx_usage_lines(&usage, lines, array_length(lines));
   return &handler;
 }
+
+#endif

@@ -126,60 +126,8 @@
     <ClInclude Include="..\src\win32-glob.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="LibFlac.vcxproj">
-      <Project>{38203d05-af71-4ff2-a183-a7d9cb8d2ae0}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="LibGsm.vcxproj">
-      <Project>{bee9f57c-384e-4c99-87eb-629bf45c8a89}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="LibId3Tag.vcxproj">
-      <Project>{40ea92b6-38aa-4e67-894d-92c37c946402}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="LibLpc10.vcxproj">
-      <Project>{c588ff17-fb2f-48d9-bb99-40b6d52b9b85}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="LibOgg.vcxproj">
-      <Project>{c5c229ac-316d-42cb-9ca3-329619618972}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="LibPng.vcxproj">
-      <Project>{46e7ac9d-3e96-4b34-b493-501bc277d6f9}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="LibSndFile.vcxproj">
-      <Project>{342bda83-c83f-4168-8425-e1df72f47018}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="LibSndFileG72x.vcxproj">
-      <Project>{7016d4c2-a0ab-4bfd-9aa1-4ecdccbe6301}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="LibSndFileGSM610.vcxproj">
-      <Project>{d2572de1-610e-46a4-8dd2-8a693347d76a}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
     <ProjectReference Include="LibSoX.vcxproj">
       <Project>{f17be535-c7e8-4930-a6fd-32498d73a533}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="LibSpeex.vcxproj">
-      <Project>{60902b83-8b26-4dbd-b635-4cecf5f4744c}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="LibVorbis.vcxproj">
-      <Project>{524a24cd-0973-4733-8eb9-f419dc6f9997}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="LibWavPack.vcxproj">
-      <Project>{7461cc57-b1cb-4766-b357-f51587449474}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="LibZLib.vcxproj">
-      <Project>{90d19fcf-8560-4396-a250-ddf74d1b0e36}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>

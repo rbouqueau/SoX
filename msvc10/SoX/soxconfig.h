@@ -42,53 +42,53 @@
    directory containing sox.exe. */
 #define PKGLIBDIR "./soxlib"
 
-#define HAVE_AMRNB 1
-#define STATIC_AMRNB 1
-#define DL_AMRNB 1
+//#define HAVE_AMRNB 0
+//#define STATIC_AMRNB 0
+#define DL_AMRNB 0
 
-#define HAVE_AMRWB 1
-#define STATIC_AMRWB 1
-#define DL_AMRWB 1
+//#define HAVE_AMRWB 0
+//#define STATIC_AMRWB 0
+#define DL_AMRWB 0
 
-#define HAVE_FLAC 1
-#define STATIC_FLAC 1
+//#define HAVE_FLAC 0
+//#define STATIC_FLAC 0
 #define FLAC__NO_DLL
 
-#define HAVE_GSM 1
-#define STATIC_GSM 1
+//#define HAVE_GSM 0
+//#define STATIC_GSM 0
 
-#define HAVE_ID3TAG 1
+//#define HAVE_ID3TAG 0
 
-#define DL_LAME 1
+//#define DL_LAME 0
 
-#define HAVE_LPC10 1
-#define STATIC_LPC10 1
+//#define HAVE_LPC10 0
+//#define STATIC_LPC10 0
 
-#define HAVE_MAD_H 1
-#define DL_MAD 1
+//#define HAVE_MAD_H 0
+//#define DL_MAD 0
 
-#define HAVE_MP3 1
-#define STATIC_MP3 1
+//#define HAVE_MP3 0
+//#define STATIC_MP3 0
 
-#define HAVE_OGG_VORBIS 1
-#define STATIC_OGG_VORBIS 1
+//#define HAVE_OGG_VORBIS 0
+//#define STATIC_OGG_VORBIS 0
 
-#define HAVE_PNG 1
+//#define HAVE_PNG 0
 
-#define HAVE_SNDFILE 1
-#define HAVE_SNDFILE_1_0_18 1
-#define HAVE_SFC_SET_SCALE_INT_FLOAT_WRITE 1
-#define STATIC_SNDFILE 1
-#define DL_SNDFILE 1
+//#define HAVE_SNDFILE 0
+//#define HAVE_SNDFILE_1_0_18 0
+//#define HAVE_SFC_SET_SCALE_INT_FLOAT_WRITE 0
+//#define STATIC_SNDFILE 0
+//#define DL_SNDFILE 0
 
-#define HAVE_SPEEXDSP 1
+//#define HAVE_SPEEXDSP 0
 
 #define HAVE_WAVEAUDIO 1
 #define STATIC_WAVEAUDIO 1
 
-#define HAVE_WAVPACK 1
-#define HAVE_WAVPACK_H 1
-#define STATIC_WAVPACK 1
+//#define HAVE_WAVPACK 0
+//#define HAVE_WAVPACK_H 0
+//#define STATIC_WAVPACK 0
 
 #define HAVE_CONIO_H 1
 #define HAVE__FSEEKI64 1
@@ -96,7 +96,7 @@
 #define HAVE_IO_H 1
 #define HAVE_MEMORY_H 1
 #define HAVE_POPEN 1
-#define HAVE_SPEEXDSP 1
+//#define HAVE_SPEEXDSP 0
 #define HAVE_STDINT_H 1
 #define HAVE_STDLIB_H 1
 #define HAVE_STRDUP 1

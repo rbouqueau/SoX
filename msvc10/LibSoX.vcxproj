@@ -263,7 +263,6 @@
     <ClCompile Include="..\src\f8-fmt.c" />
     <ClCompile Include="..\src\fap.c" />
     <ClCompile Include="..\src\flac.c" />
-    <ClCompile Include="..\src\gsm.c" />
     <ClCompile Include="..\src\gsrt.c" />
     <ClCompile Include="..\src\hcom.c" />
     <ClCompile Include="..\src\htk.c" />

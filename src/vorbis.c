@@ -22,6 +22,8 @@
 #include <string.h>
 #include <errno.h>
 
+#ifdef HAVE_OGG_VORBIS
+
 #include <ogg/ogg.h>
 #include <vorbis/codec.h>
 #include <vorbis/vorbisfile.h>
@@ -424,3 +426,4 @@ LSX_FORMAT_HANDLER(vorbis)
   };
   return &handler;
 }
+#endif

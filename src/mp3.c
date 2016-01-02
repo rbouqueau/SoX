@@ -40,7 +40,7 @@ typedef enum {
 #endif
 
 #if defined(HAVE_ID3TAG) && (defined(HAVE_IO_H) || defined(HAVE_UNISTD_H))
-#define USING_ID3TAG 1
+//Romain #define USING_ID3TAG 1
 #endif
 
 #ifdef USING_ID3TAG

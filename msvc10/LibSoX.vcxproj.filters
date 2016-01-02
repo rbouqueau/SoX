@@ -381,9 +381,6 @@
     <ClCompile Include="..\src\flac.c">
       <Filter>Format Sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\gsm.c">
-      <Filter>Format Sources</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\gsrt.c">
       <Filter>Format Sources</Filter>
     </ClCompile>

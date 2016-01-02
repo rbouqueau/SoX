@@ -22,6 +22,8 @@
    stdio.h; apparently OS/2 has this bug */
 #include <sys/types.h>
 
+#if HAVE_FLAC == 1
+
 #include <FLAC/all.h>
 
 #define MAX_COMPRESSION 8
@@ -602,3 +604,4 @@ LSX_FORMAT_HANDLER(flac)
   };
   return &handler;
 }
+#endif

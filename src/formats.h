@@ -84,7 +84,7 @@
   FORMAT(flac)
 #endif
 #if defined HAVE_GSM && (defined STATIC_GSM || !defined HAVE_LIBLTDL)
-  FORMAT(gsm)
+  //Romain: FORMAT(gsm)
 #endif
 #if defined HAVE_LPC10 && (defined STATIC_LPC10 || !defined HAVE_LIBLTDL)
   FORMAT(lpc10)
