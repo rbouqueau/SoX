@@ -3057,6 +3057,9 @@ int main2(int argc, char **argv)
 #define alloca _alloca
 #endif
 int main(int argc, char **argv) {
+#if 1
+	return main2(argc, argv);
+#else
 #define ARGV2SIZE 14
 	char *argv2[ARGV2SIZE];
 	const int expectedArgNum = 6;
@@ -3092,4 +3095,5 @@ int main(int argc, char **argv) {
 		argv2[13] = dst;
 		return main2(ARGV2SIZE, argv2);
 	}
+#endif
 }
